@@ -1,0 +1,318 @@
+/*--ROOT--*/
+body{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/*--HEADER--*/
+header > ul > li > a{
+    color: #fff;
+    font-size: 10vmin;
+}
+header > ul > li{
+    list-style: none;
+    text-align: center;
+    margin: 2vw;
+}
+header > ul{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #140c27;
+    padding: 3vw;
+}
+@media (min-width:501px) and (max-width:1200px){
+    header > ul > li > a{
+        font-size:5vmin;
+    }
+    header > ul{
+        display:flex;
+        justify-content:space-around;
+    }
+    header{
+        padding: 2vw;
+    }
+}
+@media (min-width:1201px){
+    header > ul > li > a{
+        font-size: 4vmin;
+    }
+    header > ul{
+        display:flex;
+        justify-content:start;
+    }
+    header{
+        padding: 1vmin;
+    }
+}
+/*--LOGO--*/
+div.logo{
+    background-size: auto 120%;
+    background-position: center top;
+    background-image: url(../media/img/back_logo.png);
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+div.logo > p{
+    color: #fff;
+    filter: drop-shadow(0px 0px 20px #000);
+    font-size: 350%;
+    text-align: center;
+    font-weight: bold;
+}
+@media (min-width:501px) and (max-width:1200px){
+    div.logo{
+        background-size: auto 120%;
+        background-position: center top;
+        height: 40vh
+    }
+    div.logo > p{
+        font-size: 600%;
+    }
+}
+@media (min-width:1201px){
+    div.logo{
+        background-size: 120% auto;
+        background-position: center top;
+        height: 40vh
+    }
+    div.logo > p{
+        font-size: 800%;
+    }
+}
+/*--MOD_1--*/
+div.mod_1{
+    display:grid; ;
+    grid-template-rows:[row_1] 1fr [row_2] 1fr [row_3] auto [row_end];
+    grid-template-areas:
+    'header'
+    'img'
+    'text'
+    ;
+}
+div.mod_1 > h1{
+    grid-area:header;
+    text-align: center;
+    font-size: 8vmin;
+}
+div.mod_1 > img{
+    grid-area:img;
+    display: block;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 8vmin;
+}
+div.mod_1 > p{
+    grid-area:text;
+    text-align: justify;
+    margin: 8vw;
+    font-size: 4vmin;
+    font-style: normal;
+}
+@media (min-width:1201px){
+    div.mod_1{
+        display:grid;
+        grid-template-columns:[col_1] 4fr [col_2] 5fr [col_end] ;
+        grid-template-rows:[row_1] auto [row_2] auto [row_end];
+        grid-template-areas:
+        'header header'
+        'img text'
+        ;
+    }
+    div.mod_1 > p{
+        margin: 7vw;
+    }
+    div.mod_1 > img{
+        margin: auto;
+    }
+    div.mod_1 > img{
+        width: 60%;
+    }
+}
+/*--MOD_2--*/
+.mod_2{
+    background-color: #4e56a8;
+    display:grid;
+    grid-template-rows:[row_1] 1fr [row_2] auto [row_3] auto [row_4] auto [row_5] auto [row_end];
+    grid-template-areas:
+    'name'
+    'blok_1'
+    'blok_2'
+    'blok_3'
+    'dopzon'
+    ;
+    filter: drop-shadow(0px -10px 10px #000b);
+}
+.mod_2 > h1{
+    color: #fff;
+    font-size: 8vmin;
+}
+.mod_2 > .block > h2{
+    margin-bottom: 10%;
+    font-size: 6vmin;
+    text-align: center;
+    color: #fff;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+.mod_2 > .botton > p > a{
+    margin-bottom: 10%;
+    font-size: 6vmin;
+    text-align: center;
+    color: #fff;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+.block > p {
+    margin: 0;
+    font-size: 3vmin;
+    text-align: center;
+}
+.block > p > a{
+    color: #fff;
+    text-decoration: underline;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+.block{
+    height: 30vw;
+    width: 50vw;
+    background-color: aqua;
+    position: relative;
+    float: left;;
+    margin: 3vmin auto;
+    border-radius: 5vmin;
+    background-size: 100%;
+    background-position: center top;
+    filter: drop-shadow(0px 5px 10px #000);
+}
+.block:nth-of-type(1){
+    grid-area: blok_1;
+    background-image: url(../media/img/jinx.jpg);
+}
+.block:nth-of-type(2){
+    grid-area: blok_2;
+    background-image: url(../media/img/dura.jpg);
+}
+.block:nth-of-type(3){
+    grid-area: blok_3;
+    background-image: url(../media/img/toma.jpg);
+}
+div.botton{
+    grid-area: dopzon;
+    margin: auto;
+}
+div.botton > p > a{
+    color: #000;
+    text-decoration: underline;
+    filter: drop-shadow(0px 0px 20px #000);
+    font-size: 6vmin;
+}
+.mod_2 > h1{
+    grid-area: name;
+    text-align: center;
+}
+@media (min-width:1201px){
+    .block > p {
+        font-size: 3vmin;
+    }
+    .block > p {
+        margin-top: auto;
+    }
+    .block{
+        background-size: 175%;
+        height: 30vw;
+        width: 25vw;
+    }
+    div.mod_2{
+        display:grid;
+        grid-template-columns:[col_1] auto [col_2] auto [col_3] auto [col_end] ;
+        grid-template-rows:[row_1] 1fr [row_2] auto [row_3] 1fr [row_end];
+        grid-template-areas:
+        'name name name'
+        'blok_1 blok_2 blok_3'
+        'dopzon dopzon dopzon'
+        ;
+    }
+}
+/*--FOOTER--*/
+footer{
+    background-color: #140c27;
+    display:grid;
+    grid-template-rows:[row_1] 1fr [row_2] 2fr [row_3] 2fr [row_4] 2fr [row_5] 1fr [row_end];
+    grid-template-areas:
+    'main_1'
+    'main_2'
+    'main_3'
+    'main_4'
+    'dop'
+    ;
+}
+footer > ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+footer > ul > li{
+    font-size: 3vmin;
+    list-style-type: none;
+    margin: 4vmin;
+}
+footer > ul > li > a{
+    text-decoration: underline;
+    color: #fff;
+}
+footer > h2{
+    font-size: 5vmin;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    grid-area: main_1;
+}
+footer > ul.no1{
+    margin: auto;
+    grid-area: main_2;
+}
+footer > ul.no2{
+    margin: auto;
+    grid-area: main_3;
+}
+footer > ul.no3{
+    margin: auto;
+    grid-area: main_4;
+}
+footer > p{
+    font-size: 3vmin;
+    color:#fff;
+    grid-area: dop;
+    text-align: center;
+}
+@media (min-width:501px) and (max-width:1200px){
+    footer{
+        display:grid;
+        grid-template-columns:[col_1] 1fr [col_2] 1fr [col_end] ;
+        grid-template-rows:[row_1] 2fr [row_2] 2fr [row_3] 1fr [row_end];
+        grid-template-areas:
+        'main_1 main_2'
+        'main_3 main_4'
+        'dop dop'
+        ;
+    }
+    footer > p{
+        margin-top: 7vmin;
+        margin-bottom: 7vmin;
+    }
+}
+@media (min-width:1201px){
+    footer{
+    display:grid;
+    grid-template-columns:[col_1] auto [col_2] auto [col_3] auto [col_4] auto [col_end];
+    grid-template-rows:[row_1] 5fr [row_2] 1fr [row_end];
+    grid-template-areas:
+    'main_1 main_2 main_3 main_4'
+    'dop dop dop dop'
+    ;
+}
+}
